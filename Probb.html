@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Text Update</title>
+    <fieldset style="border-radius:5px;background-color:lightblue">
+    <form method="dialog">
+      <details>
+        <summary>words maker</summary>
+        <p>create a sentence using this Two words</p>
+    <script>
+        function updateText() {
+            var words = ["you got 5 eggs and you eat 3", "World", "Welcome", "to", "Dynamic", "Text", "Update"];
+            
+            var randomIndex = Math.floor(Math.random() * words.length);
+            var randomWord = words[randomIndex];
+            document.getElementById("text").innerHTML = randomWord;
+        }
+
+        setInterval(updateText, 20000); // Call the function every 10 seconds
+    </script>
+</head>
+<body>
+    <div id="text">input </div>
+</body>
+</html>
+<html>
+<head>
+    <title>Dynamic Text Update</title>
+    <script>
+        function updateText() {
+            var words = ["king", "World", "Welcome", "process", "Dynamic", "Text", "Update"];
+            
+            var randomIndex = Math.floor(Math.random() * words.length);
+            var randomWord = words[randomIndex];
+            document.getElementById("tet").innerHTML = randomWord;
+        }
+
+        setInterval(updateText, 20000); // Call the function every 10 seconds
+    </script>
+</head>
+<body>
+    <div id="tet">social</div>
+</body>
+</html>
+<button>Blue<button>
+<button>Red</button>
+<style>
+  button{
+    height:50px;
+    width:150px;
+  }
+body {
+ margin: 0;
+ height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ background: #212121;
+}
+
+nav ul {
+ list-style-type: none;
+ padding: 0;
+ 
+}
+
+button {
+ font-size: 40px;
+ font-family: sans-serif;
+ background-color: transparent;
+ border: 1px solid #00dcdc;
+ letter-spacing: 0.1em;
+ width: 7em;
+ height: 1.5em;
+ line-height: 1.5em;
+ position: relative;
+ overflow: hidden;
+ margin: 0.5em;
+ cursor: pointer; 
+ text-align: center;   
+ border-radius: 20px 10px 150px 10px;
+}
+
+button {
+ color: white;
+ mix-blend-mode: difference; 
+}
+
+button::before {
+ border: 1px solid #00ffff;
+ content: '';
+ position: absolute;
+ width: 1em;
+ height: inherit;
+ background-color:  rgba(0, 190, 190, 0.2);
+ /* border-radius: 50%; */
+ top: 0;
+ left: -1.5em;
+ transition: 0.9s ease-in-out; 
+}
+
+button:hover::before {
+ transform: scale(16); 
+}
+
+button:hover {
+ box-shadow: 0 0 20px #00dcdc;
+}
+</style>
